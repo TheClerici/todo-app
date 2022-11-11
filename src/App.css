@@ -1,10 +1,10 @@
 .App-header {
-  background-color: #7a2dcdeb;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: calc(12px + 2vmin);
-  color: white;
-  font-weight: bold;
-}
+    background-color: #7a2dcdeb;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: calc(12px + 2vmin);
+    color: white;
+    font-weight: bold;
+  }

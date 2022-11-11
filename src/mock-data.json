@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "isDone": "No",
+    "content": "Todo number 1",
+    "priority": "High",
+    "dueDate": "March 23 2021"
+  },
+  {
+    "id": 1,
+    "isDone": "No",
+    "content": "Todo number 2",
+    "priority": "Medium",
+    "dueDate": "March 25 2021"
+  },
+  {
+    "id": 1,
+    "isDone": "No",
+    "content": "Todo number 3",
+    "priority": "Low",
+    "dueDate": "March 20 2021"
+  },
+  {
+    "id": 1,
+    "isDone": "No",
+    "content": "Todo number 4",
+    "priority": "High",
+    "dueDate": "March 23 2021"
+  },
+  {
+    "id": 1,
+    "isDone": "No",
+    "content": "Todo number 5",
+    "priority": "Medium",
+    "dueDate": "March 29 2021"
+  }
+]
