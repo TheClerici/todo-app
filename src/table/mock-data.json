@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "isDone": "No",
+    "text": "Todo number 1",
+    "priority": "High",
+    "dueDate": "2021-03-23T18:25:43.511Z"
+  },
+  {
+    "id": 2,
+    "isDone": "No",
+    "text": "Todo number 2",
+    "priority": "Medium",
+    "dueDate": "2021-03-23T18:25:43.511Z"
+  },
+  {
+    "id": 3,
+    "isDone": "No",
+    "text": "Todo number 3",
+    "priority": "Low",
+    "dueDate": "2021-03-23T18:25:43.511Z"
+  },
+  {
+    "id": 4,
+    "isDone": "No",
+    "text": "Todo number 4",
+    "priority": "High",
+    "dueDate": "2021-03-23T18:25:43.511Z"
+  },
+  {
+    "id": 5,
+    "isDone": "No",
+    "text": "Todo number 5",
+    "priority": "Medium",
+    "dueDate": "2021-03-23T18:25:43.511Z"
+  }
+]

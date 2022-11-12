@@ -1,10 +1,12 @@
-.App-header {
-    background-color: #7a2dcdeb;
-    min-height: 100vh;
+.app-header {
+    background-color: #a892ee;
+    border: 3px solid #000000;
+    padding: 0.4rem;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: calc(12px + 2vmin);
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
   }
