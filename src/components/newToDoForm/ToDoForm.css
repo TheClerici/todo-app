@@ -1,13 +1,27 @@
-form {
+.new-todo__controls {
   display: flex;
-  gap: 5px;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
-form td:last-child {
-  display: flex;
-  justify-content: space-evenly;
+.new-todo__control label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+  padding: 1rem;
 }
 
-form * {
-  font-size: 15px;
+.new-todo__control input {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 40rem;
+  max-width: 100%;
+}
+
+.new-todo__actions {
+  text-align: right;
 }

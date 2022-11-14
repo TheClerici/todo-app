@@ -9,23 +9,12 @@ const App = () => {
   const [toDos, setToDos] = useState([]);
   const [url, setUrl] = useState("http://localhost:9090/api/todos?name=&priority=&isDone=&order=&page=");
 
-
   useEffect(() => {
-    const fetchToDos = async () => {
-      const getToDos = () => axios.get(url);
-      const result = await getToDos();
-      setToDos(result.data);
-    };
-    fetchToDos();
-  }, []);
+    axios.get(url).then((response) => {setToDos(response.data)});
+  });
 
-  const addToDoHandler = async () => {
-    const fetchToDos = async () => {
-      const getToDos = () => axios.get(url);
-      const result = await getToDos();
-      setToDos(result.data);
-    };
-    fetchToDos();
+  const addToDoHandler = (toDo) => {
+    axios.post("http://localhost:9090/api/todos", toDo)
   }
 
   return (
