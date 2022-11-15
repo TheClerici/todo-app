@@ -9,7 +9,7 @@ const ToDoTable = (toDosData) => {
         <thead>
           <tr>
             <th>Done?</th>
-            <th>To Do</th>
+            <th>To Do's</th>
             <th>Priority</th>
             <th>Due date</th>
             <th>Actions</th>

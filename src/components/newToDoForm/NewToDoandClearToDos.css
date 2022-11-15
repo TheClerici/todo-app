@@ -1,11 +1,17 @@
 .new-todo {
-  background-color: #a892ee;
-  padding: .25rem;
-  margin: .35rem auto;
-  width: 80%;
+  padding: .05rem;
+  margin: auto;
+  width: 90%;
   border-radius: 12px;
   text-align: left;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.delete-todo {
+  padding: .05rem;
+  margin: auto;
+  width: 10%;
+  border-radius: 12px;
+  text-align: right;
 }
 
 .new-todo button {

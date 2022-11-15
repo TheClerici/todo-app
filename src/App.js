@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import NewToDo from "./components/newToDoForm/NewToDo";
+import NewToDoandClearToDos from "./components/newToDoForm/NewToDoandClearToDos";
 import ToDoTable from "./components/table/ToDoTable";
 import axios from "axios";
 import './App.css'
@@ -17,10 +17,17 @@ const App = () => {
     axios.post("http://localhost:9090/api/todos", toDo)
   }
 
+  const deleteToDosHandler = () => {
+    axios.delete("http://localhost:9090/api/todos")
+  }
+
   return (
     <div>
       <h3 className="app-header"> To-Do App </h3>
-      <NewToDo onAddToDo={addToDoHandler}/>
+      <NewToDoandClearToDos 
+        onAddToDo={addToDoHandler} 
+        onDeleteToDos={deleteToDosHandler}
+      />
       <ToDoTable items={toDos}/>
     </div>
   );
