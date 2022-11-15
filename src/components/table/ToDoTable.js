@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import "./ToDoTable.css";
 
 const ToDoTable = (toDosData) => {
-
   return (
     <div  className="table-container">
       <table>

@@ -9,7 +9,7 @@ const NewToDo = (props) => {
   const saveToDoDataHandler = (enteredToDoData) => {
     const toDoData = {
       ...enteredToDoData,
-      id: Math.random().toString(),
+      id: 1,
     };
     props.onAddToDo(toDoData);
     setIsAdding(false);
