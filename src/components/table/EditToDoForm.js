@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
-import "./ToDoForm.css";
+import "../newToDoForm/ToDoForm.css";
 
-const ToDoForm = (props) => {
-  const [enteredText, setEnteredText] = useState("");
+const EditToDoForm = (props) => {
+  const [enteredText, setEnteredText] = useState(null);
   const [enteredPriority, setEnteredPriority] = useState("");
-  const [enteredDueDate, setEnteredDueDate] = useState("");
+  const [enteredDueDate, setEnteredDueDate] = useState(null);
 
   const textChangeHandler = (event) => {
     setEnteredText(event.target.value);
@@ -21,12 +21,15 @@ const ToDoForm = (props) => {
 
   const submitFormHandler = (event) => {
     event.preventDefault();
-
+    
     const toDoData = {
       text: enteredText,
       priority: enteredPriority,
-      dueDate: new Date(enteredDueDate),
+      dueDate: new Date(enteredDueDate)
     };
+
+    if (enteredDueDate === null) toDoData.dueDate =  null
+    if (enteredPriority === "") toDoData.priority = null
 
     props.onSaveToDoData(toDoData);
     setEnteredText("");
@@ -43,15 +46,14 @@ const ToDoForm = (props) => {
               <label>To Do Content:</label>
               <input
                 type="text"
-                value={enteredText}
-                required="required"
+                value={undefined}
                 placeholder="To Do content..."
                 onChange={textChangeHandler}
               />
             </div>
             <div className="new-todo__control">
               <label>Priority:</label>
-              <select value={enteredPriority} required="required" onChange={priorityChangeHandler}>
+              <select value={enteredPriority} onChange={priorityChangeHandler}>
                 <option value="" disabled hidden>---- Choose here ----</option>
                 <option value="Low">Low</option>
                 <option value="Medium">Medium</option>
@@ -62,10 +64,9 @@ const ToDoForm = (props) => {
               <label>Due Date:</label>
               <input
                 type="date"
-                value={enteredDueDate}
+                value={undefined}
                 min="2022-01-01"
                 max="2024-12-31"
-                required="required"
                 onChange={dueDateChangeHandler}
               />
             </div>
@@ -73,7 +74,7 @@ const ToDoForm = (props) => {
               <button type="button" onClick={props.onCancel}>
                 Cancel
               </button>
-              <button type="submit">Add ToDo</button>
+              <button type="submit">Edit ToDo</button>
             </div>
           </div>
         </form>
@@ -82,4 +83,4 @@ const ToDoForm = (props) => {
   );
 };
 
-export default ToDoForm;
+export default EditToDoForm;

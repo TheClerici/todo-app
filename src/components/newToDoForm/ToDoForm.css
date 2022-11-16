@@ -30,6 +30,29 @@
   width: 34rem;
 }
 
+.new-todo__actions button {
+  font: inherit;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 1px solid #40005d;
+  background-color: #40005d;
+  color: white;
+  border-radius: 12px;
+  margin-right: 1rem;
+}
+
+.new-todo__actions button:hover,
+.new-todo__actions button:active {
+  background-color: #510674;
+  border-color: #510674;
+}
+
+.new-todo__actions button.alternative {
+  color: #220131;
+  border-color: transparent;
+  background-color: transparent;
+}
+
 .overlay {
   z-index: 1;
   position: fixed;

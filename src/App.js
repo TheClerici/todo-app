@@ -21,6 +21,16 @@ const App = () => {
     axios.delete("http://localhost:9090/api/todos")
   }
 
+  const editToDoHandler = (id, toDo) => {
+    console.log(id)
+    console.log(toDo)
+    axios.put(`http://localhost:9090/api/todos/${id}`, toDo)
+  }
+
+  const deleteToDoHandler = (id) => {
+    axios.delete(`http://localhost:9090/api/todos/${id}`)
+  }
+
   return (
     <div>
       <h3 className="app-header"> To-Do App </h3>
@@ -28,7 +38,11 @@ const App = () => {
         onAddToDo={addToDoHandler} 
         onDeleteToDos={deleteToDosHandler}
       />
-      <ToDoTable items={toDos}/>
+      <ToDoTable 
+        items={toDos}
+        onEditToDo={editToDoHandler}
+        onDelete={deleteToDoHandler}
+      />
     </div>
   );
 };
