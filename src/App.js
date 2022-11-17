@@ -22,8 +22,6 @@ const App = () => {
   }
 
   const editToDoHandler = (id, toDo) => {
-    console.log(id)
-    console.log(toDo)
     axios.put(`http://localhost:9090/api/todos/${id}`, toDo)
   }
 

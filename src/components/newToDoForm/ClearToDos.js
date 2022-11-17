@@ -4,8 +4,8 @@ import "./ClearToDos.css";
 
 const ClearToDos = (props) => {
   return (
-    <div className="overlay">
-      <div className="modalContainer">
+    <div className="overlay__clear">
+      <div className="modalContainer__clear">
         <div className="clear-todo__controls">
           <div className="clear-todo__control">
             <label>You really want to Delete all To Do's?</label>

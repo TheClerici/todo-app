@@ -10,9 +10,9 @@
   font-weight: bold;
   margin-bottom: 0.5rem;
   display: block;
-  margin: auto;
-  width: 50%;
+  width: 99%;
   padding: 10px;
+  text-align: left;
 }
 
 .new-todo__control input {
@@ -54,11 +54,30 @@
 }
 
 .overlay {
-  z-index: 1;
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay__add {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.55);
 }
 
 .modalContainer {
@@ -69,7 +88,20 @@
   transform: translate(-50%, -50%);
   display: flex;
   background-color: aliceblue;
-  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.modalContainer__add {
+  max-width: 545px;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  background-color: aliceblue;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.6);
   border-radius: 12px;
   padding: 1rem;
 }

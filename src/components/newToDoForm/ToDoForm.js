@@ -5,7 +5,7 @@ import "./ToDoForm.css";
 const ToDoForm = (props) => {
   const [enteredText, setEnteredText] = useState("");
   const [enteredPriority, setEnteredPriority] = useState("");
-  const [enteredDueDate, setEnteredDueDate] = useState("");
+  const [enteredDueDate, setEnteredDueDate] = useState(null);
 
   const textChangeHandler = (event) => {
     setEnteredText(event.target.value);
@@ -28,6 +28,8 @@ const ToDoForm = (props) => {
       dueDate: new Date(enteredDueDate),
     };
 
+    if (enteredDueDate === null) toDoData.dueDate =  null
+
     props.onSaveToDoData(toDoData);
     setEnteredText("");
     setEnteredPriority("");
@@ -35,8 +37,8 @@ const ToDoForm = (props) => {
   };
 
   return (
-    <div className="overlay">
-      <div className="modalContainer">
+    <div className="overlay__add">
+      <div className="modalContainer__add">
         <form onSubmit={submitFormHandler}>
           <div className="new-todo__controls">
             <div className="new-todo__control">
@@ -62,10 +64,9 @@ const ToDoForm = (props) => {
               <label>Due Date:</label>
               <input
                 type="date"
-                value={enteredDueDate}
+                value={undefined}
                 min="2022-01-01"
                 max="2024-12-31"
-                required="required"
                 onChange={dueDateChangeHandler}
               />
             </div>
