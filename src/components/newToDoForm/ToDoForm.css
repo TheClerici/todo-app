@@ -25,6 +25,16 @@
   border-collapse: collapse;
 }
 
+.new-todo__control select {
+  font: inherit;
+  padding: 0.18rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 12rem;
+  margin-left: .1rem;
+  margin-bottom: 1rem;
+}
+
 .new-todo__actions {
   text-align: center;
   width: 34rem;

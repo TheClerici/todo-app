@@ -1,14 +1,15 @@
 .app-header {
-    background-color: #a892ee;
-    border: 3px solid #000000;
-    padding: .35rem;
-    margin: .35rem auto;
-    width: 15rem;
-    max-width: 95%;
-    border-radius: 12px;
-    text-align: center;
-    font-size: calc(10px + 2vmin);
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
-  }
+  background-color: rgb(117, 201, 250);
+  border: 3px solid #000000;
+  padding: 0.35rem;
+  margin: 0.35rem auto;
+  margin-top: .6rem;
+  width: 15rem;
+  max-width: 95%;
+  border-radius: 12px;
+  text-align: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}

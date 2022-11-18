@@ -1,0 +1,55 @@
+.filter {
+  background-color: rgb(205, 235, 253);
+  width: 93%;
+  margin: 0.35rem auto;
+  margin-top: .8rem;
+  border: 1.2px solid #000000;
+  border-radius: 12px;
+  min-width: 48rem;
+}
+
+.filter label {
+  font-weight: bold;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.filter input {
+  font: inherit;
+  padding: 0.2rem;
+  border-radius: 6px;
+  border: 1px solid rgb(0, 0, 0);
+  width: 40rem;
+  text-align: left;
+  margin-left: 1.9rem;
+  margin-bottom: .5rem;
+  margin-top: .5rem;
+}
+
+.filter select {
+  font: inherit;
+  padding: 0.18rem;
+  border-radius: 6px;
+  border: 1px solid rgb(0, 0, 0);
+  width: 12rem;
+  margin-left: 1rem;
+  margin-bottom: .5rem;
+}
+
+.filter button {
+  font: inherit;
+  padding: 0.18rem;
+  border-radius: 6px;
+  border: 1px solid rgb(0, 0, 0);
+  width: 5rem;
+  margin-left: 1rem;
+  margin-bottom: .5rem;
+  cursor: pointer;
+  position: relative;
+  left: 45.8%;
+}
+
+.filter button:hover,
+.filter button:active {
+  background-color: rgb(230, 230, 230);
+}

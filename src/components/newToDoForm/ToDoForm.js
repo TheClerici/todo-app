@@ -54,7 +54,7 @@ const ToDoForm = (props) => {
             <div className="new-todo__control">
               <label>Priority:</label>
               <select value={enteredPriority} required="required" onChange={priorityChangeHandler}>
-                <option value="" disabled hidden>---- Choose here ----</option>
+                <option value="" disabled hidden>Choose here...</option>
                 <option value="Low">Low</option>
                 <option value="Medium">Medium</option>
                 <option value="High">High</option>

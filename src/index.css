@@ -5,6 +5,7 @@ html {
 }
 
 body {
+  min-width: 48rem;
   margin: 0;
   background-color: #f0f8ff;
 }
