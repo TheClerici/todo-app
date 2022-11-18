@@ -29,9 +29,6 @@ const FilterToDos = (props) => {
     };
 
     props.onFilterToDos(filterData);
-    setEnteredText("");
-    setEnteredPriority("");
-    setEnteredIsDone("");
   };
 
   return (
@@ -49,7 +46,7 @@ const FilterToDos = (props) => {
         <div>
           <label>Priority:</label>  
           <select value={enteredPriority} onChange={priorityChangeHandler}>
-            <option value="" disabled hidden> Choose priority... </option>
+            <option value="">All</option>
             <option value="Low">Low</option>
             <option value="Medium">Medium</option>
             <option value="High">High</option>
@@ -58,7 +55,7 @@ const FilterToDos = (props) => {
         <div>
         <label>Is Done?</label>  
           <select value={enteredIsDone} onChange={isDoneChangeHandler}>
-            <option value="" disabled hidden> Choose status... </option>
+            <option value="">All</option>
             <option value="done">Done</option>
             <option value="undone">Undone</option>
           </select>

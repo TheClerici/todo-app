@@ -61,7 +61,7 @@ const ToDoForm = (props) => {
               </select>
             </div>
             <div className="new-todo__control">
-              <label>Due Date:</label>
+              <label>Due Date: (Empty = No due date)</label>
               <input
                 type="date"
                 value={undefined}

@@ -2,9 +2,10 @@
   margin-top: .5rem;
   padding: .05rem;
   margin: auto;
-  width: 90%;
   border-radius: 12px;
-  text-align: left;
+  min-width: 48rem;
+  max-width: 48rem;
+  text-align: center;
 }
 
 .new-todo button {

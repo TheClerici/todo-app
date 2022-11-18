@@ -40,7 +40,7 @@ const ToDoTable = (props) => {
             <th>
               <input type="checkbox"></input>
             </th>
-            <th>To Do's</th>
+            <th>Name</th>
             <th>Priority</th>
             <th>Due date</th>
             <th>Actions</th>
