@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React,{ useState } from "react";
 
 import "./FilterToDos.css";
 
@@ -14,10 +14,10 @@ const FilterToDos = (props) => {
   const priorityChangeHandler = (event) => {
     setEnteredPriority(event.target.value);
   };
-
+  
   const isDoneChangeHandler = (event) => {
-    setEnteredIsDone(event.target.value)
-  }
+    setEnteredIsDone(event.target.value);
+  };
 
   const submitFormHandler = (event) => {
     event.preventDefault();

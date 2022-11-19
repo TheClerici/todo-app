@@ -6,7 +6,9 @@ import "./ToDoTable.css";
 const ToDoTable = (props) => {
   const [isEditing, setIsEditing] = useState(false);
   const [id, setId] = useState("");
-  const [toDoState, setToDoState] = useState([]);
+  const [toDoState, setToDoState] = useState(false);
+  const [enteredPriorityOrder, setEnteredPriorityOrder] = useState("");
+  const [enteredDueDateOrder, setEnteredDueDateOrder] = useState("");
 
   const editToDoHandler = (enteredData) => {
     const toDoData = {
@@ -27,9 +29,17 @@ const ToDoTable = (props) => {
   };
 
   const stateHandler = (id) => {
-    props.items.map((data) => {
-      if (data.id === id) setToDoState(!toDoState)
-    })
+    setToDoState(!toDoState)
+  }
+
+  const priorityOrderChangeHandler = (event) => {
+    setEnteredPriorityOrder(event.target.value);
+    props.onPriorityOrder(event.target.value);
+  };
+
+  const dueDateOrderChangeHandler = (event) => {
+    setEnteredDueDateOrder(event.target.value);
+    props.onDueDateOrder(event.target.value);
   }
 
   return (
@@ -37,13 +47,27 @@ const ToDoTable = (props) => {
       <table>
         <thead>
           <tr>
-            <th>
+            <th className="checkbox">
               <input type="checkbox"></input>
             </th>
             <th>Name</th>
-            <th>Priority</th>
-            <th>Due date</th>
-            <th>Actions</th>
+            <th className="priority">
+              Priority
+              <select value={enteredPriorityOrder} onChange={priorityOrderChangeHandler}>
+                <option value="">-- None</option>
+                <option value="low">↓ Low to High</option>
+                <option value="high">↑ High to Low</option>
+              </select>
+            </th>
+            <th className="dueDate">
+              Due date
+              <select value={enteredDueDateOrder} onChange={dueDateOrderChangeHandler}>
+                <option value="">-- None</option>
+                <option value="normal">↓ Upcoming</option>
+                <option value="reversed">↑ Furthest</option>
+              </select>
+            </th>
+            <th className="actions">Actions</th>
           </tr>
         </thead>
         <tbody>

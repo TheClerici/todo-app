@@ -10,6 +10,15 @@
   margin-left: 5%;
 }
 
+.table-container select {
+  font: inherit;
+  cursor: pointer;
+  margin-left: 5%;
+  font-weight: normal;
+  width: 2.4rem;
+  height: 1.5rem auto;
+}
+
 table {
   margin: 0.35rem auto;
   border-collapse: collapse;
@@ -32,4 +41,20 @@ th {
 
 td {
   background-color: rgb(205, 235, 253);
+}
+
+.checkbox {
+  width: 2.1rem;
+}
+
+.actions {
+  width: 8rem;
+}
+
+.priority {
+  width: 7.7rem;
+}
+
+.dueDate {
+  width: 8.45rem;
 }

@@ -10,6 +10,12 @@ import './App.css'
 const App = () => {
   const [toDos, setToDos] = useState([]);
   const [url, setUrl] = useState("http://localhost:9090/api/todos?name=&priority=&isDone=&priorityOrder=&dueDateOrder=&page=");
+  const [text, setText] = useState("");
+  const [priority, setPriority] = useState("");
+  const [isDone, setIsDone] = useState("");
+  const [priorityOrder, setPriorityOrder] = useState("");
+  const [dueDateOrder, setDueDateOrder] = useState("");
+  const [page, setPage] = useState("");
 
   useEffect(() => {
     axios.get(url).then((response) => {setToDos(response.data)});
@@ -32,7 +38,20 @@ const App = () => {
   }
 
   const filterToDosHandler = (data) => {
-    setUrl(`http://localhost:9090/api/todos?name=${data.text}&priority=${data.priority}&isDone=${data.isDone}&priorityOrder=&dueDateOrder=&page=`)
+    setText(data.text);
+    setPriority(data.priority)
+    setIsDone(data.isDone)
+    setUrl(`http://localhost:9090/api/todos?name=${data.text}&priority=${data.priority}&isDone=${data.isDone}&priorityOrder=${priorityOrder}&dueDateOrder=${dueDateOrder}&page=${page}`)
+  }
+
+  const priorityOrderHandler = (order) => {
+    setPriorityOrder(order)
+    setUrl(`http://localhost:9090/api/todos?name=${text}&priority=${priority}&isDone=${isDone}&priorityOrder=${order}&dueDateOrder=${dueDateOrder}&page=${page}`)
+  }
+
+  const dueDateOrderHandler = (order) => {
+    setDueDateOrder(order)
+    setUrl(`http://localhost:9090/api/todos?name=${text}&priority=${priority}&isDone=${isDone}&priorityOrder=${priorityOrder}&dueDateOrder=${order}&page=${page}`)
   }
 
   return (
@@ -47,6 +66,8 @@ const App = () => {
         items={toDos}
         onEditToDo={editToDoHandler}
         onDelete={deleteToDoHandler}
+        onPriorityOrder={priorityOrderHandler}
+        onDueDateOrder={dueDateOrderHandler}
       />
     </div>
   );
