@@ -52,7 +52,7 @@ const ToDoTable = (props) => {
             <th className="checkbox">
               <input type="checkbox"></input>
             </th>
-            <th>Name</th>
+            <th className="name">Name</th>
             <th className="priority">
               Priority
               <select className="table-select" value={enteredPriorityOrder} onChange={priorityOrderChangeHandler}>
@@ -82,7 +82,7 @@ const ToDoTable = (props) => {
                   onChangeStatus={changeStatusHandler}
                 />
               </td>
-              <td>{toDo.text}</td>
+              <td className={toDo.isDone === "done" ? "doneText" : "text"}>{toDo.text}</td>
               <td>{toDo.priority}</td>
               <td>{toDo.dueDate}</td>
               <td>
@@ -93,9 +93,7 @@ const ToDoTable = (props) => {
                    onCancel={stopEditingHandler}
                    />
                 )}
-                <button type="button" onClick={() => props.onDelete(toDo.id)}>
-                  <AiFillDelete/>
-                </button>
+                <button type="button" onClick={() => props.onDelete(toDo.id)}><AiFillDelete/></button>
               </td>
             </tr>
           ))}

@@ -22,7 +22,6 @@
 table {
   margin: 0.35rem auto;
   border-collapse: collapse;
-  width: 95%;
   min-width: 48rem;
   max-width: 48rem;
 }
@@ -52,6 +51,10 @@ td button {
   width: 2.1rem;
 }
 
+.name {
+  max-width: 24.6rem;
+}
+
 .actions {
   width: 5.33rem;
   text-align: center;
@@ -63,4 +66,13 @@ td button {
 
 .dueDate {
   width: 8.45rem;
+}
+
+.doneText {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.text {
+  opacity: 1;
 }

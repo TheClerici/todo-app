@@ -1,5 +1,7 @@
 import React from "react";
 
+import './Checkbox.css'
+
 const Checkbox = (props) => {
   let checkedValue = (props.status === "done" ? true : false)
 
@@ -8,13 +10,12 @@ const Checkbox = (props) => {
   };
 
   return (
-    <div>
       <input
+        className="box"
         onChange={stateHandler}
         type="checkbox"
         checked={checkedValue}
       />
-    </div>
   );
 };
 
