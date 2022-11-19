@@ -53,7 +53,7 @@ const ToDoTable = (props) => {
             <th>Name</th>
             <th className="priority">
               Priority
-              <select value={enteredPriorityOrder} onChange={priorityOrderChangeHandler}>
+              <select className="table-select" value={enteredPriorityOrder} onChange={priorityOrderChangeHandler}>
                 <option value="">-- None</option>
                 <option value="low">↓ Low to High</option>
                 <option value="high">↑ High to Low</option>
@@ -61,7 +61,7 @@ const ToDoTable = (props) => {
             </th>
             <th className="dueDate">
               Due date
-              <select value={enteredDueDateOrder} onChange={dueDateOrderChangeHandler}>
+              <select className="table-select" value={enteredDueDateOrder} onChange={dueDateOrderChangeHandler}>
                 <option value="">-- None</option>
                 <option value="normal">↓ Upcoming</option>
                 <option value="reversed">↑ Furthest</option>
