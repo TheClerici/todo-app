@@ -54,6 +54,11 @@ const App = () => {
     setUrl(`http://localhost:9090/api/todos?name=${text}&priority=${priority}&isDone=${isDone}&priorityOrder=${priorityOrder}&dueDateOrder=${order}&page=${page}`)
   }
 
+  const changeIsDoneHandler = (id, status) => {
+    if (status === "undone") axios.put(`http://localhost:9090/api/todos/${id}/done`)
+    if (status === "done") axios.put(`http://localhost:9090/api/todos/${id}/undone`)
+  }
+
   return (
     <div>
       <h3 className="app-header"> To-Do App </h3>
@@ -68,6 +73,7 @@ const App = () => {
         onDelete={deleteToDoHandler}
         onPriorityOrder={priorityOrderHandler}
         onDueDateOrder={dueDateOrderHandler}
+        onStatus={changeIsDoneHandler}
       />
     </div>
   );

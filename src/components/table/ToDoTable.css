@@ -7,7 +7,7 @@
 
 .table-container button {
   cursor: pointer;
-  margin-left: 5%;
+  font: inherit;
 }
 
 .table-select {
@@ -43,12 +43,18 @@ td {
   background-color: rgb(205, 235, 253);
 }
 
+td button {
+  padding: .005rem .23rem;
+  margin-left: 7%;
+}
+
 .checkbox {
   width: 2.1rem;
 }
 
 .actions {
-  width: 8rem;
+  width: 5.33rem;
+  text-align: center;
 }
 
 .priority {

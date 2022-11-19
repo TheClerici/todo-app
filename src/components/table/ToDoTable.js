@@ -1,12 +1,14 @@
 import React, { useState } from "react";
+import { FaEdit } from "react-icons/fa"
+import { AiFillDelete } from "react-icons/ai";
 
 import EditToDoForm from "./EditToDoForm";
+import Checkbox from "./Checkbox";
 import "./ToDoTable.css";
 
 const ToDoTable = (props) => {
   const [isEditing, setIsEditing] = useState(false);
   const [id, setId] = useState("");
-  const [toDoState, setToDoState] = useState(false);
   const [enteredPriorityOrder, setEnteredPriorityOrder] = useState("");
   const [enteredDueDateOrder, setEnteredDueDateOrder] = useState("");
 
@@ -28,10 +30,6 @@ const ToDoTable = (props) => {
     setIsEditing(false);
   };
 
-  const stateHandler = (id) => {
-    setToDoState(!toDoState)
-  }
-
   const priorityOrderChangeHandler = (event) => {
     setEnteredPriorityOrder(event.target.value);
     props.onPriorityOrder(event.target.value);
@@ -40,6 +38,10 @@ const ToDoTable = (props) => {
   const dueDateOrderChangeHandler = (event) => {
     setEnteredDueDateOrder(event.target.value);
     props.onDueDateOrder(event.target.value);
+  }
+
+  const changeStatusHandler = (id, status) => {
+    props.onStatus(id, status)
   }
 
   return (
@@ -74,22 +76,26 @@ const ToDoTable = (props) => {
           {props.items.map((toDo) => (
             <tr key={toDo.id}>
               <td>
-                <input onChange={() => stateHandler(toDo.id)} type="checkbox" checked={toDoState}></input>
+                <Checkbox
+                  id={toDo.id}
+                  status={toDo.isDone}
+                  onChangeStatus={changeStatusHandler}
+                />
               </td>
               <td>{toDo.text}</td>
               <td>{toDo.priority}</td>
               <td>{toDo.dueDate}</td>
               <td>
-                <div className="container-button">
-                {!isEditing && <button onClick={() => startEditingHandler(toDo.id)}>Edit</button>}
+                {!isEditing && <button onClick={() => startEditingHandler(toDo.id)}><FaEdit/></button>}
                 {isEditing && (
                   <EditToDoForm 
                    onSaveToDoData={editToDoHandler}
                    onCancel={stopEditingHandler}
                    />
                 )}
-                <button type="button" onClick={() => props.onDelete(toDo.id)}>Delete</button>
-                </div>
+                <button type="button" onClick={() => props.onDelete(toDo.id)}>
+                  <AiFillDelete/>
+                </button>
               </td>
             </tr>
           ))}
