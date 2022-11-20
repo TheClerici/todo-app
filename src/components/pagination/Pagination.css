@@ -1,0 +1,39 @@
+.pagination {
+  margin-top: 0.5rem;
+  text-align: center;
+  font: optional;
+}
+
+.pagination button {
+  cursor: pointer;
+  font: inherit;
+  padding-top: .2rem;
+  padding-right: .4rem;
+  padding-left: .4rem;
+  border-radius: 12px;
+  border-color: #373737;
+}
+
+.pagination button:hover,
+.pagination button:active {
+  background-color: #e2e2e2;
+  border-color: #373737;
+}
+
+.page {
+    font-weight: bold;
+  padding: 0.3rem;
+  padding-left: .7rem;
+  padding-right: .7rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-size: calc(3px + 2vmin);
+}
+
+.total {
+  font: inherit;
+  font-size: calc(1px + 2vmin);
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  color: rgb(97, 97, 97);
+}

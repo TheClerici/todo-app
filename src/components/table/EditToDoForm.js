@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import "../newToDoForm/ToDoForm.css";
+import "./EditToDoForm.css";
 
 const EditToDoForm = (props) => {
   const [enteredText, setEnteredText] = useState(null);
@@ -41,8 +41,8 @@ const EditToDoForm = (props) => {
     <div className="overlay">
       <div className="modalContainer">
         <form onSubmit={submitFormHandler}>
-          <div className="new-todo__controls">
-            <div className="new-todo__control">
+          <div className="edit__controls">
+            <div className="edit__control">
               <label>To Do Content:</label>
               <input
                 type="text"
@@ -51,7 +51,7 @@ const EditToDoForm = (props) => {
                 onChange={textChangeHandler}
               />
             </div>
-            <div className="new-todo__control">
+            <div className="edit__control">
               <label>Priority:</label>
               <select value={enteredPriority} onChange={priorityChangeHandler}>
                 <option value="" disabled hidden>Choose here...</option>
@@ -60,7 +60,7 @@ const EditToDoForm = (props) => {
                 <option value="High">High</option>
               </select>
             </div>
-            <div className="new-todo__control">
+            <div className="edit__control">
               <label>Due Date:</label>
               <input
                 type="date"
@@ -70,7 +70,7 @@ const EditToDoForm = (props) => {
                 onChange={dueDateChangeHandler}
               />
             </div>
-            <div className="new-todo__actions">
+            <div className="edit__actions">
               <button type="button" onClick={props.onCancel}>
                 Cancel
               </button>
