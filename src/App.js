@@ -73,14 +73,10 @@ const App = () => {
   return (
     <div>
       <h3 className="app-header"> To-Do App </h3>
+      <FilterToDos onFilterToDos={filterToDosHandler}/>
       <NewToDoandClearToDos 
         onAddToDo={addToDoHandler} 
         onDeleteToDos={deleteToDosHandler}
-      />
-      <FilterToDos onFilterToDos={filterToDosHandler}/>
-      <Pagination
-        totalPages={nPages}
-        onPageChange={pageHandler}
       />
       <ToDoTable 
         items={toDos}
@@ -89,6 +85,10 @@ const App = () => {
         onPriorityOrder={priorityOrderHandler}
         onDueDateOrder={dueDateOrderHandler}
         onStatus={changeIsDoneHandler}
+      />
+      <Pagination
+        totalPages={nPages}
+        onPageChange={pageHandler}
       />
       <div className="total">Total pages: {nPages}</div>
       <Stats items={stats}/>

@@ -15,11 +15,6 @@
   font-weight: bold;
 }
 
-.stats__avg label {
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
-}
-
 .stats-box-1 {
   background-color: rgb(205, 235, 253);
   margin: 0.35rem auto;
