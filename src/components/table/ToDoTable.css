@@ -24,6 +24,7 @@ table {
   border-collapse: collapse;
   min-width: 48rem;
   max-width: 48rem;
+  margin-bottom: 0%;
 }
 
 th,
@@ -48,24 +49,30 @@ td button {
 }
 
 .checkbox {
-  width: 2.1rem;
+  max-width: 2.1rem;
+  min-width: 2.1rem;
 }
 
 .name {
   max-width: 24.6rem;
+  min-width: 24.6rem;
+  max-height: none;
 }
 
 .actions {
-  width: 5.33rem;
+  max-width: 5.33rem;
+  min-width: 5.33rem;
   text-align: center;
 }
 
 .priority {
-  width: 7.7rem;
+  max-width: 7.7rem;
+  min-width: 7.7rem;
 }
 
 .dueDate {
-  width: 8.45rem;
+  max-width: 8.45rem;
+  min-width: 8.45rem;
 }
 
 .doneText {

@@ -4,12 +4,14 @@ import FilterToDos from "./components/filter/FilterToDos";
 import NewToDoandClearToDos from "./components/newToDoForm/NewToDoandClearToDos";
 import ToDoTable from "./components/table/ToDoTable";
 import Pagination from "./components/pagination/Pagination";
+import Stats from "./components/stats/Stats";
 
 import axios from "axios";
 import './App.css'
 
 const App = () => {
   const [toDos, setToDos] = useState([]);
+  const [stats, setStats] = useState([]);
   const [url, setUrl] = useState("http://localhost:9090/api/todos?name=&priority=&isDone=&priorityOrder=&dueDateOrder=&page=");
   const [text, setText] = useState("");
   const [priority, setPriority] = useState("");
@@ -20,11 +22,9 @@ const App = () => {
   const [nPages, setNPages] = useState(1);
 
   useEffect(() => {
-    axios.get(url).then((response) => {
-      setToDos(response.data)
-      setNPages(1)
-      if (response.data !== []) setNPages(Math.ceil(toDos[0].toDosSize / 10))
-    });
+    axios.get(url).then((response) => {setToDos(response.data)});
+    axios.get("http://localhost:9090/api/todos/size").then((response) => {setNPages(Math.ceil(response.data / 10))})
+    axios.get("http://localhost:9090/api/todos/stats").then((response) => {setStats(response.data)})
   });
 
   const addToDoHandler = (toDo) => {
@@ -73,10 +73,14 @@ const App = () => {
   return (
     <div>
       <h3 className="app-header"> To-Do App </h3>
-      <FilterToDos onFilterToDos={filterToDosHandler}/>
       <NewToDoandClearToDos 
         onAddToDo={addToDoHandler} 
         onDeleteToDos={deleteToDosHandler}
+      />
+      <FilterToDos onFilterToDos={filterToDosHandler}/>
+      <Pagination
+        totalPages={nPages}
+        onPageChange={pageHandler}
       />
       <ToDoTable 
         items={toDos}
@@ -86,10 +90,8 @@ const App = () => {
         onDueDateOrder={dueDateOrderHandler}
         onStatus={changeIsDoneHandler}
       />
-      <Pagination
-        totalPages={nPages}
-        onPageChange={pageHandler}
-      />
+      <div className="total">Total pages: {nPages}</div>
+      <Stats items={stats}/>
     </div>
   );
 };

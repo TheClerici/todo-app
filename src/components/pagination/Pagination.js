@@ -31,7 +31,6 @@ const Pagination = (props) => {
           {currentPage}
         </span>
       <button onClick={nextPage}><AiFillCaretRight/></button>
-      <div className="total">Total pages: {props.totalPages}</div>
     </div>
   );
 };

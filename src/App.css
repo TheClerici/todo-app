@@ -13,3 +13,11 @@
   font-weight: bold;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
 }
+
+.total {
+  font: inherit;
+  font-size: calc(1px + 2vmin);
+  margin-bottom: 2rem;
+  color: rgb(97, 97, 97);
+  text-align: center;
+}

@@ -1,0 +1,45 @@
+.stats {
+  background-color: rgb(205, 235, 253);
+  width: 93%;
+  margin: 0.35rem auto;
+  margin-top: 0.8rem;
+  border: 1.2px solid #000000;
+  border-radius: 12px;
+  min-width: 48rem;
+  max-width: 48rem;
+  text-align: center;
+}
+
+.stats__avg {
+  margin-top: 0.6rem;
+  font-weight: bold;
+}
+
+.stats-box-1 {
+  background-color: rgb(205, 235, 253);
+  margin-top: 0.8rem;
+  min-width: 12rem;
+  max-width: 12rem;
+  text-align: center;
+  position: relative;
+  right: 32%;
+}
+
+.stats-box-2 {
+  background-color: rgb(205, 235, 253);
+  margin-top: 0.8rem;
+  min-width: 12rem;
+  max-width: 12rem;
+  text-align: center;
+  position: relative;
+}
+
+.stats-box-3 {
+  background-color: rgb(205, 235, 253);
+  margin-top: 0.8rem;
+  min-width: 12rem;
+  max-width: 12rem;
+  text-align: center;
+  position: relative;
+  left: 32%;
+}
