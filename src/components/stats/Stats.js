@@ -13,6 +13,7 @@ const Stats = (props) => {
           {props.items[0]} Minutes and {props.items[1]} Seconds.
         </label>
       </div>
+      <div className="stats-boxes">
       <div className="stats-box-1">
         <label className="stats__avg">Avg Low priority:</label>
         <div>
@@ -36,6 +37,7 @@ const Stats = (props) => {
             {props.items[6]} Min and {props.items[7]} Sec.
           </label>
         </div>
+      </div>
       </div>
     </div>
   );

@@ -8,11 +8,18 @@
   min-width: 48rem;
   max-width: 48rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .stats__avg {
   margin-top: 0.6rem;
   font-weight: bold;
+}
+
+.stats-boxes {
+  display: flex;
+  flex-direction: row;
 }
 
 .stats-box-1 {
@@ -24,8 +31,6 @@
   min-width: 12rem;
   max-width: 12rem;
   text-align: center;
-  position: relative;
-  right: 32%;
 }
 
 .stats-box-2 {
@@ -48,6 +53,4 @@
   min-width: 12rem;
   max-width: 12rem;
   text-align: center;
-  position: relative;
-  left: 32%;
 }
