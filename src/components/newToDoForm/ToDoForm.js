@@ -52,7 +52,6 @@ const ToDoForm = (props) => {
               <input
                 type="text"
                 value={enteredText}
-                required="required"
                 placeholder="To Do content..."
                 onChange={textChangeHandler}
               />
@@ -61,7 +60,6 @@ const ToDoForm = (props) => {
               <label>Priority:</label>
               <select
                 value={enteredPriority}
-                required="required"
                 onChange={priorityChangeHandler}
               >
                 <option value="" disabled hidden>

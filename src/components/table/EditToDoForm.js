@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./EditToDoForm.css";
 
 const EditToDoForm = (props) => {
-  const [enteredText, setEnteredText] = useState(null);
+  const [enteredText, setEnteredText] = useState("");
   const [enteredPriority, setEnteredPriority] = useState("");
   const [enteredDueDate, setEnteredDueDate] = useState(null);
   const [enteredDelete, setEnteredDelete] = useState(false)
@@ -32,7 +32,8 @@ const EditToDoForm = (props) => {
       dueDate: new Date(enteredDueDate),
     };
 
-    if (enteredDueDate === null) toDoData.dueDate =  null
+    if (enteredText === "") toDoData.text = null
+    if (enteredDueDate === null) toDoData.dueDate = null
     if (enteredPriority === "") toDoData.priority = null
 
     props.onSaveToDoData(toDoData, enteredDelete);
@@ -54,7 +55,7 @@ const EditToDoForm = (props) => {
   }
 
   return (
-    <div className="overlay">
+    <div className="overlay-edit">
       <div className="modalContainer">
         <form onSubmit={submitFormHandler}>
           <div className="edit__controls">
