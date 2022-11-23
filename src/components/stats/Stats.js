@@ -14,7 +14,7 @@ const Stats = (props) => {
         </label>
       </div>
       <div className="stats-boxes">
-      <div className="stats-box-1">
+      <div className="stats-box">
         <label className="stats__avg">Avg Low priority:</label>
         <div>
           <label>
@@ -22,7 +22,7 @@ const Stats = (props) => {
           </label>
         </div>
       </div>
-      <div className="stats-box-2">
+      <div className="stats-box">
         <label className="stats__avg">Avg Medium priority:</label>
         <div>
           <label>
@@ -30,7 +30,7 @@ const Stats = (props) => {
           </label>
         </div>
       </div>
-      <div className="stats-box-3">
+      <div className="stats-box">
         <label className="stats__avg">Avg High priority:</label>
         <div>
           <label>

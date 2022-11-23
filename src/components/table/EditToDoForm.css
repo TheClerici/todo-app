@@ -10,9 +10,9 @@
   font-weight: bold;
   margin-bottom: 0.5rem;
   display: block;
-  width: 99%;
   padding: 5px;
   text-align: left;
+  font-size: medium;
 }
 
 .edit__control input {
@@ -30,25 +30,24 @@
   padding: 0.18rem;
   border-radius: 6px;
   border: 1px solid #ccc;
-  width: 12rem;
+  width: 31.9rem;
   margin-left: 0.1rem;
   margin-bottom: 1rem;
 }
 
 .edit__actions {
   text-align: center;
-  width: 34rem;
+  width: 30rem;
 }
 
 .edit__actions button {
   font: inherit;
   cursor: pointer;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   border: 1px solid #40005d;
   background-color: #40005d;
   color: white;
   border-radius: 12px;
-  margin-right: 1rem;
 }
 
 .edit__actions button:hover,
@@ -69,11 +68,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.09);
+  background: rgba(0, 0, 0, 0.3);
   z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .modalContainer {
@@ -86,4 +86,31 @@
   background-color: aliceblue;
   border-radius: 12px;
   padding: 1rem;
+}
+
+.edit__date label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+  padding: 5px;
+  text-align: left;
+  font-size: medium;
+}
+
+.edit__date input {
+  margin-left: .5rem;
+}
+
+.edit__date-2 input {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 32rem;
+  text-align: left;
+  margin-left: .2rem;
+}
+
+.edit-invisible {
+  visibility: hidden;
 }

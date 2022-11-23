@@ -8,16 +8,16 @@
   max-width: 95%;
   border-radius: 12px;
   text-align: center;
-  font-size: calc(10px + 2vmin);
+  font-size: x-large;
   color: rgb(0, 0, 0);
   font-weight: bold;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
 }
 
 .total {
-  font: inherit;
-  font-size: calc(1px + 2vmin);
-  margin-bottom: 2rem;
-  color: rgb(97, 97, 97);
+  font: optional;
+  font-size: small;
+  margin-bottom: 1.5rem;
+  color: rgb(78, 78, 78);
   text-align: center;
 }

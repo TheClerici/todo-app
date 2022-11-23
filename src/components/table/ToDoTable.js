@@ -12,11 +12,11 @@ const ToDoTable = (props) => {
   const [enteredPriorityOrder, setEnteredPriorityOrder] = useState("");
   const [enteredDueDateOrder, setEnteredDueDateOrder] = useState("");
 
-  const editToDoHandler = (enteredData) => {
+  const editToDoHandler = (enteredData, enteredDelete) => {
     const toDoData = {
       ...enteredData,
     };
-    props.onEditToDo(id, toDoData)
+    props.onEditToDo(id, toDoData, enteredDelete)
     setId("");
     setIsEditing(false);
   };

@@ -35,8 +35,8 @@ const App = () => {
     axios.delete("http://localhost:9090/api/todos")
   }
 
-  const editToDoHandler = (id, toDo) => {
-    axios.put(`http://localhost:9090/api/todos/${id}`, toDo)
+  const editToDoHandler = (id, toDo, enteredDelete) => {
+    axios.put(`http://localhost:9090/api/todos/${id}/${enteredDelete}`, toDo)
   }
 
   const deleteToDoHandler = (id) => {

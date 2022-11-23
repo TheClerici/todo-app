@@ -22,35 +22,15 @@
   flex-direction: row;
 }
 
-.stats-box-1 {
+.stats-box {
   background-color: rgb(205, 235, 253);
   margin: 0.35rem auto;
   margin-top: 0.8rem;
+  margin-bottom: 0.5rem;
   border: 1.2px solid #000000;
   border-radius: 12px;
   min-width: 12rem;
   max-width: 12rem;
   text-align: center;
-}
-
-.stats-box-2 {
-  background-color: rgb(205, 235, 253);
-  margin: 0.35rem auto;
-  margin-top: 0.8rem;
-  border: 1.2px solid #000000;
-  border-radius: 12px;
-  min-width: 12rem;
-  max-width: 12rem;
-  text-align: center;
-}
-
-.stats-box-3 {
-  background-color: rgb(205, 235, 253);
-  margin: 0.35rem auto;
-  margin-top: 0.8rem;
-  border: 1.2px solid #000000;
-  border-radius: 12px;
-  min-width: 12rem;
-  max-width: 12rem;
-  text-align: center;
+  padding: 0.5rem;
 }
