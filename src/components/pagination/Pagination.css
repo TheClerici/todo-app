@@ -1,10 +1,10 @@
 .pagination {
-  margin-top: 1rem;
+  margin-top: .5rem;
   text-align: center;
   font: optional;
 }
 
-.pagination button {
+.button {
   cursor: pointer;
   font: inherit;
   padding-top: .2rem;
@@ -12,6 +12,17 @@
   padding-left: .4rem;
   border-radius: 12px;
   border-color: #373737;
+}
+
+.button-inv {
+  cursor: pointer;
+  font: inherit;
+  padding-top: .2rem;
+  padding-right: .4rem;
+  padding-left: .4rem;
+  border-radius: 12px;
+  border-color: #373737;
+  visibility: hidden;
 }
 
 .pagination button:hover,
@@ -22,10 +33,31 @@
 
 .page {
   font-weight: bold;
-  padding: 0.3rem;
-  padding-left: .7rem;
-  padding-right: .7rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
   font-size: large;
+}
+
+.sidepage-left {
+  margin-left: 1.5rem;
+  margin-right: .1rem;
+  font-size: small;
+}
+
+.sidepage-left-inv {
+  margin-left: 1.5rem;
+  margin-right: .1rem;
+  font-size: small;
+  visibility: hidden;
+}
+
+.sidepage-right {
+  margin-left: .1rem;
+  margin-right: 1.5rem;
+  font-size: small;
+}
+
+.sidepage-right-inv {
+  margin-left: .1rem;
+  margin-right: 1.5rem;
+  font-size: small;
+  visibility: hidden;
 }

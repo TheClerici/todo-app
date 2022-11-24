@@ -13,7 +13,7 @@ const ErrorModal = (props) => {
         <div className={classes.modal}>
           <header className={classes.header}>
             <h3>
-              {props.error} - {props.status}
+              {props.error} {props.status}
             </h3>
           </header>
           <div className={classes.content}>

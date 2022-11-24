@@ -26,11 +26,11 @@ const Pagination = (props) => {
 
   return (
     <div className="pagination">
-      <button onClick={prevPage}><AiFillCaretLeft/></button>
-        <span className="page">
-          {currentPage}
-        </span>
-      <button onClick={nextPage}><AiFillCaretRight/></button>
+      <button className={currentPage !== 1 ? "button" : "button-inv"} onClick={prevPage}><AiFillCaretLeft/></button>
+        <span className={currentPage !== 1 ? "sidepage-left" : "sidepage-left-inv"}>{currentPage - 1}...</span>
+        <span className="page">{currentPage}</span>
+        <span className={currentPage !== props.totalPages ? "sidepage-right" : "sidepage-right-inv"}>...{currentPage + 1}</span>
+      <button className={currentPage !== props.totalPages ? "button" : "button-inv"} onClick={nextPage}><AiFillCaretRight/></button>
     </div>
   );
 };
