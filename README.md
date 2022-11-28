@@ -23,7 +23,8 @@ Open [http://localhost:8080](http://localhost:8080) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.\
-Every time you try to make an invalid request, an error with the status and message will appear in the console, as well with an Error Modal explaining what happended.
+Every time you try to make an invalid request, an error with the status and message will appear in the console, as well with an Error Modal explaining what happended.\
+Make sure you refresh when backend and frontend are running and ready to test!
 
 ### `npm test`
 
