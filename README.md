@@ -31,14 +31,16 @@ Already has some tests but it's still a WIP. Feel free to test some of the code!
 
 # Functionality
 
+Preview of how the app looks:
+
 <p align="center">
-    <img width="600" src="https://github.com/TheClerici/todo-app/blob/main/app.jpg?raw=true">
+    <img width="700" src="https://github.com/TheClerici/todo-app/blob/main/app.jpg?raw=true">
 </p>
 <div align="center">
     <h5><strong>Fig 1. App</strong></h5>
 </div>
 
-Available features:
+A list of all the available features:
 
 ## CRUD endpoints
 
