@@ -4,7 +4,7 @@ Hello! For you to get started I'd recommend to first get yourself that same vers
 
 * Node v18.12.0
 * npm 8.19.2
-* IDE: Visual Studio Code
+* Visual Studio Code
 
 ## Get Started
 
