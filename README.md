@@ -16,23 +16,23 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.
+Runs the app in the development mode.\
 Open [http://localhost:8080](http://localhost:8080) to view it in your browser.
 
-The page will reload when you make changes.
-You may also see any lint errors in the console.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.\
 Every time you try to make an invalid request, an error with the status and message will appear in the console, as well with an Error Modal explaining what happended.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.
-Make sure to run all test by pressing `a`.
+Launches the test runner in the interactive watch mode.\
+Make sure to run all test by pressing `a`.\
 Already has some tests but it's still a WIP. Feel free to test some of the code!
 
 # Functionality
 
 <p align="center">
-    <img width="400" src="https://github.com/TheClerici/TODO-APP/app.jpg?raw=true">
+    <img width="400" src="https://github.com/TheClerici/todo-app/blob/main/app.jpg?raw=true">
 </p>
 <div align="center">
     <h5><strong>Fig 2. Structure</strong></h5>
