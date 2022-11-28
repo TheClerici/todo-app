@@ -8,7 +8,9 @@ Hello! For you to get started I'd recommend to first get yourself that same vers
 
 ## Get Started
 
-Open the terminal on VSC, and run `npm install` to get your packages installed.
+### `npm install`
+
+After cloning the repo or downloading it, open the terminal on VSC, and run `npm install` to get your packages installed.
 
 ## Available Scripts
 
