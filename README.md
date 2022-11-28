@@ -1,6 +1,14 @@
-# Getting Started with Create React App
+# To Do App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hello! For you to get started I'd recommend to first get yourself that same versions as we do.
+
+* Node v18.12.0
+* npm 8.19.2
+* IDE: Visual Studio Code
+
+## Get Started
+
+Open the terminal on VSC, and run `npm install` to get your packages installed.
 
 ## Available Scripts
 
@@ -8,63 +16,76 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Runs the app in the development mode.
+Open [http://localhost:8080](http://localhost:8080) to view it in your browser.
 
-The page will reload when you make changes.\
+The page will reload when you make changes.
 You may also see any lint errors in the console.
+Every time you try to make an invalid request, an error with the status and message will appear in the console, as well with an Error Modal explaining what happended.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode.
+Make sure to run all test by pressing `a`.
+Already has some tests but it's still a WIP. Feel free to test some of the code!
 
-### `npm run build`
+# Functionality
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p align="center">
+    <img width="400" src="https://github.com/TheClerici/TODO-APP/app.jpg?raw=true">
+</p>
+<div align="center">
+    <h5><strong>Fig 2. Structure</strong></h5>
+</div>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Available features:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## CRUD endpoints
 
-### `npm run eject`
+This will agilize the way we work with the front-end since the API is already awaiting our requests.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Search box
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Need to search for an item? Get a quick search with the search box. Use the filters as you may need.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Add task
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Huge button that opens up a modal for you to fill your new task.
 
-## Learn More
+## Delete all tasks
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Already done with everything? Perfect! You are two clicks away to empty all of your tasks.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Information Table
 
-### Code Splitting
+Displays all of the tasks and let you set as done, edit or delete each task. They can also be sorted in certain order that you choose.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Done/Undone checkmark
 
-### Analyzing the Bundle Size
+Already done? Just check in the first column the corresponding task that is already finished. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Forgot something? You can always uncheck the task if needed.
 
-### Making a Progressive Web App
+## Sort by parameter
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Sort by the desired parameter for priority or due date at the top of the table.
 
-### Advanced Configuration
+## Delete Task
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+If needed, when lookin through your tasks you can decide to delete the desired item.
 
-### Deployment
+## Edit Task
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Forgot to add something to your task? Click on edit to help you out, make sure you fill something at least, or you will get the error modal.
 
-### `npm run build` fails to minify
+## Error Modal
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Every time you make an invalid request, an error modal will appear, this can from no body while adding a Task to trying to delete something that does not exist!
+
+## Pagination
+
+Displays a fixed amount of tasks (10 max) so we don't overload your browser.
+
+## Metrics Box
+
+Displays the average time for task to be done and also displays the average time filtered by priority.
